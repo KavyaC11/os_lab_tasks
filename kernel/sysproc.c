@@ -105,3 +105,41 @@ sys_uptime(void)
   release(&tickslock);
   return xticks;
 }
+
+//---------- BEGIN TASK 3.1----------
+uint64 sys_shm_create(void){ 
+  int key; 
+  argint(0,&key); 
+  return shm_create(key);
+ }
+uint64 sys_shm_get(void)   {
+   int key;
+    argint(0,&key);
+     return (uint64)shm_get(key); 
+    }
+uint64 sys_shm_close(void) {
+   int key; 
+   argint(0,&key);
+    return shm_close(key);
+   }
+
+uint64 sys_mbox_create(void){ 
+  int key; 
+  argint(0,&key);
+   return kmbox_create(key); 
+  }
+uint64 sys_mbox_send(void)  { 
+  int id,msg;
+   argint(0,&id);
+    argint(1,&msg);
+     return kmbox_send(id,msg);
+     }
+uint64 sys_mbox_recv(void)  { 
+  int id; 
+  uint64 u; 
+  argint(0,&id);
+   argaddr(1,&u); 
+   return kmbox_recv(id,u); 
+  }
+
+  //---------- END TASK 3.1----------

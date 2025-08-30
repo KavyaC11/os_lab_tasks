@@ -20,3 +20,11 @@
 #define SYS_link   19
 #define SYS_mkdir  20
 #define SYS_close  21
+//---------- BEGIN TASK 3.1----------
+#define SYS_shm_create   22
+#define SYS_shm_get      23
+#define SYS_shm_close    24
+#define SYS_mbox_create  25
+#define SYS_mbox_send    26
+#define SYS_mbox_recv    27
+//---------- END TASK 3.1----------

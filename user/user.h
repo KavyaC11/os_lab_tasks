@@ -47,3 +47,13 @@ void printf(const char*, ...) __attribute__ ((format (printf, 1, 2)));
 // umalloc.c
 void* malloc(uint);
 void free(void*);
+
+//---------- BEGIN TASK 3.1----------
+int   shm_create(int key);
+void* shm_get(int key);
+int   shm_close(int key);
+
+int   mbox_create(int key);
+int   mbox_send(int mbox_id, int msg);
+int   mbox_recv(int mbox_id, int *msg);
+//---------- END TASK 3.1----------

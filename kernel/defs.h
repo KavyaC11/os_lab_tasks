@@ -183,3 +183,18 @@ void            virtio_disk_intr(void);
 
 // number of elements in fixed-size array
 #define NELEM(x) (sizeof(x)/sizeof((x)[0]))
+
+//---------- BEGIN TASK 3.1----------
+// shared memory
+void   shminit(void);
+int    shm_create(int key);
+void*  shm_get(int key);
+int    shm_close(int key);
+void   shm_detach_all(struct proc *p);
+
+// mailboxes
+void mboxinit(void);
+int  kmbox_create(int key);
+int  kmbox_send(int id, int msg);
+int  kmbox_recv(int id, uint64 user_dst);
+//---------- END TASK 3.1----------

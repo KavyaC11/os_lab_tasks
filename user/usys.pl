@@ -42,3 +42,12 @@ entry("getpid");
 entry("sbrk");
 entry("pause");
 entry("uptime");
+# ---------- BEGIN TASK 3.1----------
+entry("shm_create");
+entry("shm_get");
+entry("shm_close");
+
+entry("mbox_create");
+entry("mbox_send");
+entry("mbox_recv");
+# ---------- END TASK 3.1----------

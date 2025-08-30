@@ -12,4 +12,8 @@
 #define FSSIZE       2000  // size of file system in blocks
 #define MAXPATH      128   // maximum file path name
 #define USERSTACK    1     // user stack pages
-
+//---------- BEGIN TASK 3.1----------
+#define NSHM       16      // shared-memory keys
+#define MBOX_MAX   32      // mailboxes
+#define MBOX_CAP   16      // ints per mailbox
+//---------- END TASK 3.1----------
